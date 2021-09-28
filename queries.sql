@@ -49,3 +49,11 @@ WHERE `phone` IS NULL;
 
 
 
+
+-- QUERIES CON GROUP BY 
+
+-- 1. Contare quanti iscritti ci sono stati ogni anno
+
+SELECT COUNT(*) AS `number_of_enrolled`, YEAR(`enrolment_date`) AS `year` 
+FROM `students` 
+GROUP BY `year` ; 
